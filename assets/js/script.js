@@ -1,35 +1,55 @@
-runGame() {
+//Wait for DOM Elements to load into page
+//Get button Elements and add  Event Listeners to them
+
+document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "submit") {
+                alert ("You have pressed submit!");
+            } else {
+                let gameType = this.getAttribute("data-type");
+                alert (`You have pressed ${gameType}`);
+
+            }
+            
+        });
+    }
+});
+
+function runGame() {
 
 }
 
-checkAnswer() {
+function checkAnswer() {
 
 }
 
-calculateCorrectAnswer() {
+function calculateCorrectAnswer() {
 
 }
 
-incrementScore() {
+function incrementScore() {
 
 }
 
-incrementWrongAnswer() {
+function incrementWrongAnswer() {
 
 }
 
-displayAdditionQuestion() {
+function displayAdditionQuestion() {
 
 }
 
-displaySubtractQuestion() {
+function displaySubtractQuestion() {
 
 }
 
-displayMultiplyQuestion() {
+function displayMultiplyQuestion() {
 
 }
 
-displayDivisionQuestion() {
-    
+function displayDivisionQuestion() {
+
 }
